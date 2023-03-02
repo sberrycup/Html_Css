@@ -8,21 +8,146 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 
     <style>
         #div01 .font1 {
-            font-family: 'Nanum Gothic', sans-serif;
+            font-family: 'Black Han Sans', sans-serif;
             font-size: 24px;
+            color: blueviolet;
         }
+
+        #div03 > .text_start { text-align: start; }
+        #div03 > .text_end { text-align: end;}
+        #div03 > .text_center { text-align: center; }
+        #div03 > .text_justify { text-align: justify; }
+
+        #div04 > .line-height, #div04 > .line-height-px, #div04 > .line-height-pt {
+            font-size: 1.2em;
+        }
+
+        #div04 > .line-height-px {
+            line-height: 64px;
+        }
+
+        #div04 > .line-height-pt {
+            line-height: 500%;
+        }
+
+        #div06 > p {
+            font-family: 'Black Han Sans', sans-serif;
+        }
+
+        #div06 > .shadow {
+            text-shadow: 5px 5px 3px grey ;
+        }
+
+        #div06 > .shadow2 {
+            text-shadow: -5px -5px 3px grey ;
+        }
+
+        #div06 > .shadow3 {
+            text-shadow: 5px 5px 0 grey ;
+        }
+
+        #div09 > .book1 { list-style: none }
+
+        #div09 > .book2 { list-style: upper-alpha; }
+
+        #div09 > .list-style-image { list-style-image: url(./002.jpg);}
     </style>
-    
+
 </head>
 <body>
     <div id="div01">
         <h3>구글 폰트 사용</h3>
         <p>구글 폰트를 사용하지 않은 글자입니다</p>
         <p class="font1">구글 폰트를 사용한 글자입니다</p>
+    </div>
+
+    <br>
+
+    <div id="div02">
+        <h3>color 적용</h3>
+        
+        <div id="div02_1">
+            <h3>color name</h3>
+            <p style="color: royalblue;">색상을 변경할 태그</p>
+        </div>
+
+        <div id="div02_2">
+            <h3>hex</h3>
+            <p style="color: #ff0022;">색상을 변경할 태그</p>
+        </div>
+
+        <div id="div02_3">
+            <h3>rgb/rgba</h3>
+            <p style="color: rgb(200, 100, 255);">색상을 변경할 태그</p>
+            <p style="color: rgba(200, 100, 255, 0.5);">색상을 변경할 태그</p>
+        </div>
+
+        <div id="div02_4">
+            <h3>hsl/hsla</h3>
+            <p style="color: hsl(179, 47%, 50%);">색상을 변경할 태그</p>
+            <p style="color: hsla(179, 47%, 50%, 0.7);">색상을 변경할 태그</p>
+        </div>
+
+
+        <br>
+
+        <div id="div03">
+            <h3>text-aliign</h3>
+            <p class="text_start">start use</p>
+            <p calss="text_end">end use</p>
+            <p class="text_center">center use</p>
+            <p class="text_justify">justify use</p>
+        </div>
+
+        <div id="div04">
+            <h3>line-height use</h3>
+            <p class="line-height">kine-height no</p>
+            <p class="line-height">kine-height no</p>
+            <p class="line-height-px">kine-height yes</p>
+            <p class="line-height-pt">kine-height yes</p>
+            <p class="line-height">kine-height no</p>
+        </div>
+
+        <div id="div05">
+            <h3>text decoration</h3>
+            <p style="text-decoration: none;">none</p>
+            <p style="text-decoration: underline;">underline</p>
+            <p style="text-decoration: overline;">overline</p>
+            <p style="text-decoration: line-through;">line through</p>
+        </div>
+
+        <div id="div06">
+            <h3>tex shadow</h3>
+            <p class="shadow">text_shadow</p>
+            <p class="shadow2">text_shadow02</p>
+            <p class="shadow3">text_shadow03</p>
+        </div>
+
+        <div id="div09">
+            <h3>list-style</h3>
+            <ul class="book1">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+
+            <ul class="book2">
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+
+            <h3>list-style-image</h3>
+            <ul class="list-style-image">
+                <li>HTML5</li>
+                <li>CSS</li>
+            </ul>
+        </div>
+
+
     </div>
 </body>
 </html>
