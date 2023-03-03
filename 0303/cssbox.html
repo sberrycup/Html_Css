@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #div01 .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 5%;
+    }
+
+    #div01 .shadow {
+        box-shadow: 10px 10px 6px gray;
+    }
+
+    #div02 .box {
+        width: 50px;
+        height: 30px;
+        display: inline-block;
+        margin: 10px;
+        border: 3px solid black;
+    }
+
+    #div02 > div .none {
+        border-style: none;
+        background-color: darkred;
+    }
+    #div02 > div .hidden {
+        border-style: hidden;
+        background-color: orange;
+    }
+
+    #div02 > div .solid {
+        border-style: solid;
+        background-color: gold;
+    }
+
+    #div02 > div .dotted {
+        border-style: dotted;
+        background-color: greenyellow;
+    }
+
+    #div02 > div .dashed {
+        border-style: dashed;
+        background-color: royalblue;
+    }
+
+    #div02 > div .double {
+        border-style: double;
+        background-color: blueviolet;
+    }
+
+</style>
+
+</head>
+<body>
+
+    <div id="div01">
+        <h3>box shadow</h3>
+        <div class="box shadow"></div>
+    </div><br>
+
+    <div id="div02">
+        <div>
+            <h3>border style</h3>
+            <span class="box none"></span>
+            <span class="box hidden"></span>
+            <span class="box solid"></span>
+            <span class="box dotted"></span>
+            <span class="box dashed"></span>
+            <span class="box double"></span>
+        </div>
+    </div><br>
+</body>
+</html>
