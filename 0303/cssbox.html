@@ -13,7 +13,6 @@
         border: 1px solid black;
         border-radius: 5%;
     }
-
     #div01 .shadow {
         box-shadow: 10px 10px 6px gray;
     }
@@ -25,7 +24,6 @@
         margin: 10px;
         border: 3px solid black;
     }
-
     #div02 > div .none {
         border-style: none;
         background-color: darkred;
@@ -34,25 +32,121 @@
         border-style: hidden;
         background-color: orange;
     }
-
     #div02 > div .solid {
         border-style: solid;
         background-color: gold;
     }
-
     #div02 > div .dotted {
         border-style: dotted;
         background-color: greenyellow;
     }
-
     #div02 > div .dashed {
         border-style: dashed;
         background-color: royalblue;
     }
-
     #div02 > div .double {
         border-style: double;
         background-color: blueviolet;
+    }
+
+    #div02 > div .width1 { border-width: 5px;}
+    #div02 > div .width2 { border-width: 5px 10px;}
+    #div02 > div .width3 { border-width: 5px 10px 15px;}
+    #div02 > div .width4 { border-width: 5px 10px 15px 20px;}
+    
+    #div02 > div .color {
+        border-width: 5px;
+        border-top-color: aqua;
+        border-right-color: green;
+        border-bottom-color: teal;
+        border-left-color: palegreen;
+    }
+
+    #div02 > div .border1 { border: 5px solid green; }
+    #div02 > div .border2 { border-top: 5px dotted green; }
+    #div02 > div .border3 { border-right: 5px dashed green; }
+    #div02 > div .border4 { border: 5px double green; }
+    #div02 > div .border5 { border: 5px ridge green; }
+
+    #div03 > .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid royalblue;
+        margin: 10px;
+    }
+
+    #div03 > .circle { border-radius: 50%; }
+    #div03 > .ellipse { 
+        border-radius: 50% ;
+        width: 200px; }
+    #div03 > .square { border-radius: 20px;}
+    #div03 > .rectangular { 
+        border-radius: 10px 20px 30px 40px;
+    }
+
+    #div04 .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid blue;
+    }
+
+    #div04 .red { background-color: aquamarine;}
+    #div04 .blue { background-color: cyan;}
+    #div04 .black { background-color:navy;}
+
+    #div04 .margin1 { margin: 10px;}
+    #div04 .margin2 { margin: 10px 20px;}
+    #div04 .margin3 { margin: 20px 10px 40px 30px;}
+
+    #div04 .auto { margin: auto;}
+
+    #div05 .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+    }
+
+    #div05 img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #div05 .padding { padding: 5px 10px 15px 20px;}
+    #div05 .padding2 { 
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+    }
+
+    #div06 .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #div06 .red { background-color: orangered;}
+    #div06 .blue { background-color: indianred;}
+    #div06 .black { background-color: olive;}
+
+    #div06 .none { display: none;}
+    #div06 .visiblity {visibility: hidden;}
+    #div06 .opacity { opacity: 0;}
+
+    #div06 .inline { 
+        /*inline: 해당태그의 크기는 자식태그(컨텐츠크기)의 크기에 따라 달라짐 방향속성은 일부만 사용가능*/
+        /*margin은 left,right만 사용가능 > padding도 다만 top.bottom은 다른 태그와 영역이 겹쳐 사실상 사용불가*/
+        display: inline;
+    }
+    #div06 .block { 
+        /*block: width,height와 같은 크기속성 사용가능 margin.padding 방향속성도 사용가능*/
+        display: block;
+    }
+    #div06 .inline-block { 
+        /*inline처럼 한 라인에 여러개 사용가능, block처럼 모든 방향크기속성 사용가능*/
+        display: inline-block;
     }
 
 </style>
@@ -76,5 +170,90 @@
             <span class="box double"></span>
         </div>
     </div><br>
+
+    <div id="div02">
+        <div>
+            <h3>border width</h3>
+            <span class="box width1"></span>
+            <span class="box width2"></span>
+            <span class="box width3"></span>
+            <span class="box width4"></span>
+        </div>
+
+        <div>
+            <h3>border color</h3>
+            <span class="box color"></span>
+        </div>
+
+        <div>
+            <span class="box border1"></span>
+            <span class="box border2"></span>
+            <span class="box border3"></span>
+            <span class="box border4"></span>
+            <span class="box border5"></span>
+        </div>
+    </div><br>
+
+    <div id="div03">
+        <h3>border radius</h3>
+            <div class="box circle">
+
+            </div>
+            <div class="box ellipse">
+
+            </div>
+            <div class="box square">
+
+            </div>
+
+            <div class="box rectangular">
+
+            </div>
+    </div><br>
+
+    <div id="div04">
+        <h3>margin</h3>
+            <div>
+                <div class="box red margin1"></div>
+                <div class="box blue margin2"></div>
+                <div class="box black margin3"></div>
+                <div class="box auto"></div>
+            </div>
+    </div><br>
+
+    <div id="div05">
+        <h3>padding</h3>
+
+        <div class="box padding">
+            <img src="./002.jpg">
+        </div>
+        <div class="box padding2">
+            <img src="./002.jpg">
+        </div>
+    </div>
+
+    <div id="div06">
+        <h3>display</h3>
+
+        <div>
+            <h4>none과 다른 속성 차이</h4>
+            <div class="box red none"></div>
+            <div class="box blue visiblity"></div>
+            <div class="box black opacity"></div>
+
+            <h4>block inline</h4>
+            <div class="box inline">div_block</div>
+            <div class="box inline">div_block</div>
+            <div class="box inline">div_block</div>
+<br>
+            <span class="box block">span_inline</span>
+            <span class="box block">span_inline</span>
+            <span class="box block">span_inline</span>
+
+            <div class="box inline-block"></div>
+            <span class="box inline-block"></span>
+        </div>
+    </div>
+
 </body>
 </html>

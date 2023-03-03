@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*float사용시 먼저 상요한 태크가 해당방향에 붙음*/
+        #div01 .float1 > img {
+            float: left;
+            margin: 30px;
+        }
+
+        #div02 img { float: right;}
+
+        #div02 .noclearfix, #div02 .clearfix {
+            border: 3px solid black;
+            padding: 5px;
+        }
+
+        /*float사용시 부모태그에 ::after을 사용하여 초기화*/
+        #div02 .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>float</h3>
+        <div class="float1">
+            <img src="./001.jpg" alt="">
+            <p>abcdefg</p>
+            <p>hijklmnop</p>
+            <p>qrstuvwxyz</p>
+        </div>
+    </div><br>
+
+    <div id="div02">
+        <h3>clearfix</h3>
+        <div class="noclearfix">
+            <img src="./001.jpg" alt="">
+            <p>asd</p>
+        </div>
+
+<br style="clear: both;">
+
+        <div class="clearfix">
+            <img src="./001.jpg" alt="">
+            <p>asd</p>
+        </div>
+    </div>  
+</body>
+</html>
