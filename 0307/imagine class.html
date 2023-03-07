@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div01 .navi ul li, #div02 .navii ul li {
+            float: left;
+            width: 150px;
+            padding: 10px;
+            list-style-type: none;
+        }
+
+        #div01 .navi ul::after, #div02 .navii ul::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #div01 .navi a:link, #div01 .navi a:visited, #div02 .navii a:link, #div02 .navii a:valid {
+            display: block;
+            font-size: 14px;
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        #div01 .navi a:hover, #div01 .navi a:focus {
+            background-color: gray;
+            color: white;
+        }
+
+        #div01 .navi a:active { background-color: lightslategray;}
+
+        #div01 > div { font-size: 1.5em;}
+        #div01 > div a:link { background-color: lightsteelblue; }
+        #div01 > div a:visited { background-color: orangered; }
+
+        #div01 > div input { font-size: 1.3em;}
+        #div01 > div input:focus { background-color: slateblue;}
+
+        #div02 > .navii ul {
+            list-style-type: none;
+            padding: 10px;
+        }
+        #div02 > .navii ul::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #intro:target {
+            background-color: mediumslateblue;
+            color: lightcyan;
+        }
+
+        #div02 .contents {
+            width: 300px;
+            height: 200px;
+        }
+
+        #div03 input:checked + label {
+            color: forestgreen;
+            font-weight: bold;
+        }
+
+        #div03 button:enabled {
+            background-color: olive;
+        }
+        #div03 button:disabled {
+            background-color: peru;
+        }
+
+
+        #div04 table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #div04 td, #div04 th {
+            border: 1px solid black;
+            text-align: start;
+            padding: 5px;
+        }
+
+        /*nth-child 가상 클래스 even: 짝수줄, odd: 홀수줄*/
+        #div04 tbody tr:nth-child(odd) {
+            background-color: lightsteelblue;
+        }
+
+
+        #div05 li.new::after {
+            content: "new!";
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background-color: yellowgreen;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>가상 클래스</h3>
+
+        <nav class="navi">
+            <ul>
+                <li><a href="#">이용 안내</a></li>
+                <li><a href="#">객실 소개</a></li>
+                <li><a href="#">예약 방법</a></li>
+                <li><a href="#">예약하기</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <a href="www.naver.com">Naver</a><br>
+            <a href="www.daum.com">Daum</a><br>
+            <label for="test">Focous</label>
+            <input type="text" id="test">
+            
+        </div>
+    </div>
+
+    <div id="div02">
+        <h3>:target</h3>
+
+        <nav class="navii">
+            <ul>
+                <li><a href="#intro">이용안내</a></li>
+                <li><a href="#room">객실소개</a></li>
+                <li><a href="#reservation">예약방법 및 요금</a></li>
+                <li><a href="css.hwp">예약하기</a></li>
+            </ul>
+
+            <div id="intro" class="contents">
+                <h4>이용안내</h4>
+            </div>
+            <div id="room" class="contents">
+                <h4>객실소개</h4>
+            </div>
+            <div id="reservation" class="contents">
+                <h4>예약방법 및 요금</h4>
+            </div>
+        </nav>
+    </div>
+
+    <div id="div03">
+        <ul>
+            <li>
+                <input type="radio" name="room" id="basic">
+                <label for="basic">기본형</label>
+            </li>
+            <li>
+                <input type="radio" name="room" id="family">
+                <label for="family">가족형</label>
+            </li>
+            <li>
+                <button type="button">ㅇㅇ</button>
+                <button type="button" disabled>ㅇㅇ</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="div04">
+        <h3>문서구조에 따른 가상 선택자</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div id="div05">
+        <h3>가상요소 사용하기</h3>
+
+        <div class="container">
+            <h1>제품목록</h1>
+            <ul>
+                <li class="new">A</li>
+                <li>B<span style="font-size: x-small;">sale!</span></li>
+                <li>C</li>
+                <li class="new">D</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
