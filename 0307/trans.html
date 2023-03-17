@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            border: 2px solid royalblue;
+            padding: 5px;
+            margin: 10px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .box {
+            background-color: skyblue;
+            width: 100%;
+            height: 100%;
+        }
+
+        #div01 .movex:hover { transform: translateX(20px);}
+        #div01 .movey:hover { transform: translateY(20px);}
+        #div01 .movexy:hover { transform: translate(-20px, -20px);}
+
+        #div02 .scalex:hover{ transform: scalex(0.7);}
+        #div02 .scaley:hover{ transform: scaley(0.7);}
+        #div02 .scale:hover{ transform: scale(0.7, 0.5);}
+
+        #div03 .rotate1:hover { transform: rotate(45deg);}
+        #div03 .rotate2:hover { transform: rotate(-30deg);}
+        #div03 .rotate3:hover { transform: rotate3d(1, 2, 1.5, 40deg);}
+
+        #div04 .skewx:hover { transform: skewX(30deg);}
+        #div04 .skewy:hover { transform: skewY(20deg);}
+
+        #div05 .container {
+            transition-property: width;
+            transition-duration: 5s;
+            transition-timing-function: ease;
+            transition-delay: 0.3s;
+        }
+
+        #div05 > .container:hover { width: 300px;}
+
+        #div06 .ani1 {
+            animation-duration: 5s;
+            animation-name: colorchange;
+            animation-direction: alternate;
+            animation-iteration-count: 4;
+        }
+        #div06 .ani2 {
+            animation-duration: 5s;
+            animation-name: colorchange2;
+            animation-timing-function: ease;
+        }
+
+        @keyframes colorchange {
+            form {
+                background-color: green;
+            }
+            to {
+                background-color: darkgreen;
+            }
+        }
+        @keyframes colorchange2 {
+            0% {
+                background-color: orange;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: yellow;
+                left: 100px;
+                top: 0px;
+            }
+            50% {
+                background-color: greenyellow;
+                left: 100px;
+                top: 50px;
+            }
+            75% {
+                background-color: navy;
+                left: 0px;
+                top: 50px;
+            }
+            100% {
+                background-color: violet;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>Transform</h3>
+
+        <div class="container">
+        <div class="box movex"></div>
+        </div>
+
+        <div class="container">
+        <div class="box movey"></div>
+        </div>
+
+        <div class="container">
+        <div class="box movexy"></div>
+        </div>
+    </div>
+
+    <div id="div02">
+        <h3>Scale</h3>
+
+        <div class="container">
+        <div class="box scalex"></div>
+        </div>
+
+        <div class="container">
+        <div class="box scaley"></div>
+        </div>
+
+        <div class="container">
+        <div class="box scale"></div>
+        </div>
+    </div>
+
+    <div id="div03">
+        <h3>Rotate</h3>
+
+        <div class="container">
+        <div class="box rotate1"></div>
+        </div>
+
+        <div class="container">
+        <div class="box rotate2"></div>
+        </div>
+        
+        <div class="container">
+        <div class="box rotate3"></div>
+        </div>
+    </div>
+
+    <div id="div04">
+        <h3>Skew</h3>
+
+        <div class="container">
+        <div class="box skewx"></div>
+        </div>
+
+        <div class="container">
+        <div class="box skewy"></div>
+        </div>
+    </div>
+
+    <div id="div05">
+        <h3>Transition</h3>
+
+        <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <div id="div06">
+        <h3>Animate</h3>    
+
+        <div class="container">
+            <div class="box ani1"></div>
+        </div>
+
+        <div class="container">
+            <div class="box ani2"></div>
+        </div>
+    </div>
+
+</body>
+</html>

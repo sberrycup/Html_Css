@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #div01 > h1{
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    #div02 { background-color: limegreen;}
+    #div02 > { height: 200px;}
+    @media screen and (min-width: 600px) {
+        #div02 { background-color: lawngreen;}
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="div01">
+        <h3>Viewport</h3>
+
+        <h1>Hello...</h1>
+    </div>
+
+    <div id="div02">
+        <h3>media queries</h3>
+
+        <div>
+            <p>개발자 모드를 사용하여 화면 크기를 조절</p>
+        </div>
+    </div>
+</body>
+</html>
